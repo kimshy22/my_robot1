@@ -1,13 +1,82 @@
 <?xml version="1.0" ?>
 <sdf version="1.5">
   <world name="default">
+
     <!-- A global light source -->
     <include>
       <uri>model://sun</uri>
     </include>
+
     <!-- A ground plane -->
     <include>
       <uri>model://ground_plane</uri>
     </include>
+
+    <!-- Box obstacle 1 -->
+    <model name="box1">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      <pose>2 0 0.5 0 0 0</pose>
+    </model>
+
+    <!-- Box obstacle 2 -->
+    <model name="box2">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      <pose>0 2 0.5 0 0 0</pose>
+    </model>
+
+    <!-- Box obstacle 3 -->
+    <model name="box3">
+      <static>true</static>
+      <link name="link">
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 1</size>
+            </box>
+          </geometry>
+        </visual>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 1</size>
+            </box>
+          </geometry>
+        </collision>
+      </link>
+      <pose>-2 -2 0.5 0 0 0</pose>
+    </model>
+
   </world>
 </sdf>
